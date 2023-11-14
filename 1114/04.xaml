@@ -6,16 +6,21 @@
         xmlns:local="clr-namespace:_1114"
         mc:Ignorable="d"
         Title="_04" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="New_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed"/>
+    </Window.CommandBindings>
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="500">
             <ToolBar Height="40" Width="150" >
-                <Button x:Name="newbutton" Height="35" Width="35">
+                <Button x:Name="newbutton" Command="ApplicationCommands.New" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/new.png" />
                 </Button>
-                <Button x:Name="openbutton" Height="35" Width="45">
+                <Button x:Name="openbutton" Command="ApplicationCommands.Open" Height="35" Width="45">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/open.png" />
                 </Button>
-                <Button x:Name="savebutton" Height="35" Width="35">
+                <Button x:Name="savebutton"  Command="ApplicationCommands.Save" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/save.png" />
                 </Button>
             </ToolBar>

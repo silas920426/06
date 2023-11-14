@@ -23,5 +23,21 @@ namespace _1114
         {
             InitializeComponent();
         }
+
+        private void New_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            _04 _04 = new _04();
+            _04.Show();
+        }
+
+        private void Open_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("open");
+        }
+
+        private void Save_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("save");
+        }
     }
 }
