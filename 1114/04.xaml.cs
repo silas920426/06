@@ -49,7 +49,8 @@ namespace _1114
             italicbutton.IsChecked = (property is FontStyle && (FontStyle) property == FontStyles.Italic);
 
             property = rtbEditor.Selection.GetPropertyValue(Inline.TextDecorationsProperty);
-            underlinebutton.IsChecked = (property  != DependencyProperty.UnsetValue);
+            underlinebutton.IsChecked = (property  != DependencyProperty.UnsetValue && property is TextDecorationCollection decorations &&
+                decorations.Contains(TextDecorations.Underline[0]));
         }
     }
 }
