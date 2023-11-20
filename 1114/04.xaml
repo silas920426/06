@@ -12,8 +12,8 @@
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed"/>
     </Window.CommandBindings>
     <DockPanel>
-        <ToolBarTray DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="500">
-            <ToolBar Height="40" Width="150" >
+        <ToolBarTray DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="400">
+            <ToolBar x:Name="ApplicationToolBar" Height="40" Width="175" >
                 <Button x:Name="newbutton" Command="ApplicationCommands.New" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/new.png" />
                 </Button>
@@ -23,19 +23,27 @@
                 <Button x:Name="savebutton"  Command="ApplicationCommands.Save" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/save.png" />
                 </Button>
+                <Button x:Name="recyclebutton" Height="35" Width="35">
+                    <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/recycle.png"/>
+                </Button>
             </ToolBar>
-            <ToolBar Height="40" Width="150" >
-                <Button x:Name="boldbutton" Height="35" Width="35">
+            <ToolBar x:Name="EditingToolBar" Height="40" Width="150" RenderTransformOrigin="0.5,0.5" >
+                <ToggleButton x:Name="boldbutton" Command="EditingCommands.ToggleBold" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/bold.png" />
-                </Button>
-                <Button x:Name="italicbutton" Height="35" Width="45">
+                </ToggleButton>
+                <ToggleButton x:Name="italicbutton" Command="EditingCommands.ToggleItalic" Height="35" Width="45">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/italic.png" />
-                </Button>
-                <Button x:Name="underlinebutton" Height="35" Width="35">
+                </ToggleButton>
+                <ToggleButton x:Name="underlinebutton" Command="EditingCommands.ToggleUnderline" Height="35" Width="35">
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/underline.png" />
-                </Button>
+                </ToggleButton>
             </ToolBar>
         </ToolBarTray>
+        <RichTextBox x:Name="rtbEditor" Background="Aquamarine" SelectionChanged="rtbEditor_SelectionChanged">
+            <FlowDocument>
+                
+            </FlowDocument>
+        </RichTextBox>
     </DockPanel>
-        
+
 </Window>

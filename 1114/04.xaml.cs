@@ -39,5 +39,17 @@ namespace _1114
         {
             MessageBox.Show("save");
         }
+
+        private void rtbEditor_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            object property = rtbEditor.Selection.GetPropertyValue (TextElement.FontWeightProperty);
+            boldbutton.IsChecked = (property is FontWeight && (FontWeight) property == FontWeights.Bold);
+
+            property = rtbEditor.Selection.GetPropertyValue(TextElement.FontStyleProperty);
+            italicbutton.IsChecked = (property is FontStyle && (FontStyle) property == FontStyles.Italic);
+
+            property = rtbEditor.Selection.GetPropertyValue(Inline.TextDecorationsProperty);
+            underlinebutton.IsChecked = (property  != DependencyProperty.UnsetValue);
+        }
     }
 }
