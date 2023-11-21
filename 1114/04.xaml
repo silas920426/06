@@ -24,7 +24,7 @@
                     <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/save.png" />
                 </Button>
                 <Button x:Name="recyclebutton" Height="35" Width="35">
-                    <Image Height="32" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/recycle.png"/>
+                    <Image Height="30" Width="32" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/recycle.png"/>
                 </Button>
             </ToolBar>
             <ToolBar x:Name="EditingToolBar" Height="40" Width="150" RenderTransformOrigin="0.5,0.5" >
@@ -40,9 +40,7 @@
             </ToolBar>
         </ToolBarTray>
         <RichTextBox x:Name="rtbEditor" Background="Aquamarine" SelectionChanged="rtbEditor_SelectionChanged">
-            <FlowDocument>
-                
-            </FlowDocument>
+            <FlowDocument/>
         </RichTextBox>
     </DockPanel>
 
