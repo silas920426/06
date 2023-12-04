@@ -23,12 +23,12 @@ namespace _1114
     public partial class _04 : Window
     {
         Color fontcolor = Colors.Black;
-        
+        Color rtbbackcolor = Colors.White;
         public _04()
         {
             InitializeComponent();
             fontColorPicker.SelectedColor = fontcolor;
-            foreach(var fontFamily in Fonts.SystemFontFamilies) 
+            foreach (var fontFamily in Fonts.SystemFontFamilies) 
             {
                 fontFamilyComboBox.Items.Add(fontFamily.Source);
             }
@@ -141,11 +141,6 @@ namespace _1114
         {
             rtbEditor.Document.Blocks.Clear();
         }
-        private void rtbColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
-        {
-            Color selectedColor = (Color)rtbColorPicker.SelectedColor;
-            SolidColorBrush backBrush = new SolidColorBrush(selectedColor);
-            rtbEditor.Selection.ApplyPropertyValue(Control.BackgroundProperty, backBrush);
-        }
+
     }
 }
