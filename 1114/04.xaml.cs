@@ -23,7 +23,6 @@ namespace _1114
     public partial class _04 : Window
     {
         Color fontcolor = Colors.Black;
-        Color rtbbackcolor = Colors.White;
         public _04()
         {
             InitializeComponent();
