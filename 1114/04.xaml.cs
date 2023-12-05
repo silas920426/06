@@ -23,6 +23,7 @@ namespace _1114
     public partial class _04 : Window
     {
         Color fontcolor = Colors.Black;
+        Color backgroundColor = Colors.White;
         public _04()
         {
             InitializeComponent();
@@ -113,7 +114,7 @@ namespace _1114
             if(forgroundProperty != null)
             {
                 fontColorPicker.SelectedColor = forgroundProperty.Color;
-            } 
+            };
         }
 
         private void fontFamilyComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -141,5 +142,10 @@ namespace _1114
             rtbEditor.Document.Blocks.Clear();
         }
 
+        private void backgruondColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            backgroundColor = (Color)backgruondColorPicker.SelectedColor;
+            rtbEditor.Background = new SolidColorBrush(backgroundColor);
+        }
     }
 }

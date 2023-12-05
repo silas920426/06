@@ -41,6 +41,7 @@
                 <xctk:ColorPicker x:Name="fontColorPicker" Width="100" Height=" 30" HorizontalAlignment="Left" VerticalAlignment="Center" DisplayColorAndName="True" SelectedColorChanged="fontColorPicker_SelectedColorChanged" />
                 <ComboBox x:Name="fontFamilyComboBox" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="fontFamilyComboBox_SelectionChanged" />
                 <ComboBox x:Name="fontSizeComboBox" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="fontSizeComboBox_SelectionChanged"/>
+                <xctk:ColorPicker x:Name="backgruondColorPicker" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" SelectedColorChanged="backgruondColorPicker_SelectedColorChanged" />
             </ToolBar>
         </ToolBarTray>
         <RichTextBox x:Name="rtbEditor"  SelectionChanged="rtbEditor_SelectionChanged">
